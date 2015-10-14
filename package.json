@@ -1,0 +1,41 @@
+{
+  "name": "n.ua",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_PATH=. NODE_ENV=development gulp dev",
+    "prod": "NODE_PATH=. NODE_ENV=production gulp prod"
+  },
+  "dependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5",
+    "history": "^1.12.5",
+    "path": "^0.12.7",
+    "pretty-hrtime": "^1.0.1",
+    "react-dom": "^0.14.0",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.5.0",
+    "uglifyify": "^3.0.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  },
+  "devDependencies": {
+    "es6-promise": "^3.0.2",
+    "flux": "^2.1.1",
+    "immutable": "^3.7.5",
+    "lodash": "^3.10.1",
+    "material-ui": "~0.12.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-router": "^1.0.0-rc3"
+  }
+}
