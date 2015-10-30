@@ -12,18 +12,6 @@ Path =
   assets: './assets/'
   static: './static/'
 
-vendors = [
-  'material-ui'
-  'react'
-  'react-dom'
-  'react-addons-create-fragment'
-  'react-addons-pure-render-mixin'
-  'react-addons-transition-group'
-  'react-addons-update'
-  'react-tap-event-plugin'
-]
-
-
 gulp.task 'default', ()->
   stream = browserify
     debug: false
@@ -34,8 +22,6 @@ gulp.task 'default', ()->
     fullPaths: false
     extensions: ['.js', '.jsx']
     transform : [babelify]
-
-  #stream.require vendors
 
   bundle = ()->
     bundleLogger.start(Path.assets + 'app.jsx')
