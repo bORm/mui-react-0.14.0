@@ -1,5 +1,5 @@
 import React from 'react';
-import Router, { RouteHandler } from 'react-router';
+import ReactDOM from 'react-dom';
 
 const {
   DropDownIcon,
@@ -11,7 +11,7 @@ const {
   ToolbarSeparator,
   ToolbarTitle,
   Styles
-} = require('material-ui');
+  } = require('material-ui');
 
 const { Colors, Spacing, Typography } = Styles;
 const ThemeManager = Styles.ThemeManager;
@@ -31,22 +31,20 @@ let iconMenuItems = [
   { payload: '2', text: 'More Info' }
 ];
 
-class Root extends React.Component {
+class App extends React.Component {
   constructor(){
     super();
   }
 
   componentWillMount(){
     this.setState({
-      static : "/public/",
       muiTheme: ThemeManager.getMuiTheme(DefaultRawTheme)
     });
   }
 
   getChildContext() {
     return {
-      muiTheme: this.state.muiTheme,
-      static : this.state.static
+      muiTheme: this.state.muiTheme
     };
   }
 
@@ -65,20 +63,18 @@ class Root extends React.Component {
             <RaisedButton label="Create Broadcast" primary={true} />
           </ToolbarGroup>
         </Toolbar>
-        {this.props.children || "Welcome to your Inbox"}
       </div>
     );
   }
 }
 
-Root.contextTypes = {
+App.contextTypes = {
   router: React.PropTypes.func
 };
 
-Root.childContextTypes = {
+App.childContextTypes = {
   muiTheme: React.PropTypes.object,
-  router: React.PropTypes.func,
-  static: React.PropTypes.string.isRequired
+  router: React.PropTypes.func
 };
 
-module.exports = Root;
+ReactDOM.render(<App />, document.getElementById('app'));
