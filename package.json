@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "private": true,
-  "main": "index.js",
+  "main": "",
   "scripts": {},
   "dependencies": {
     "material-ui": "^0.13.1",
