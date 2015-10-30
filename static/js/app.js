@@ -19,23 +19,14 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _require = require('material-ui');
+var _materialUi = require('material-ui');
 
-var DropDownIcon = _require.DropDownIcon;
-var DropDownMenu = _require.DropDownMenu;
-var FontIcon = _require.FontIcon;
-var RaisedButton = _require.RaisedButton;
-var Toolbar = _require.Toolbar;
-var ToolbarGroup = _require.ToolbarGroup;
-var ToolbarSeparator = _require.ToolbarSeparator;
-var ToolbarTitle = _require.ToolbarTitle;
-var Styles = _require.Styles;
-var Colors = Styles.Colors;
-var Spacing = Styles.Spacing;
-var Typography = Styles.Typography;
+var Colors = _materialUi.Styles.Colors;
+var Spacing = _materialUi.Styles.Spacing;
+var Typography = _materialUi.Styles.Typography;
 
-var ThemeManager = Styles.ThemeManager;
-var DefaultRawTheme = Styles.LightRawTheme;
+var ThemeManager = _materialUi.Styles.ThemeManager;
+var DefaultRawTheme = _materialUi.Styles.LightRawTheme;
 
 var filterOptions = [{ payload: '1', text: 'All Broadcasts' }, { payload: '2', text: 'All Voice' }, { payload: '3', text: 'All Text' }, { payload: '4', text: 'Complete Voice' }, { payload: '5', text: 'Complete Text' }, { payload: '6', text: 'Active Voice' }, { payload: '7', text: 'Active Text' }];
 var iconMenuItems = [{ payload: '1', text: 'Download' }, { payload: '2', text: 'More Info' }];
@@ -70,21 +61,21 @@ var App = (function (_React$Component) {
         'div',
         null,
         _react2['default'].createElement(
-          Toolbar,
+          _materialUi.Toolbar,
           null,
           _react2['default'].createElement(
-            ToolbarGroup,
+            _materialUi.ToolbarGroup,
             { key: 0, float: 'left' },
-            _react2['default'].createElement(DropDownMenu, { menuItems: filterOptions })
+            _react2['default'].createElement(_materialUi.DropDownMenu, { menuItems: filterOptions })
           ),
           _react2['default'].createElement(
-            ToolbarGroup,
+            _materialUi.ToolbarGroup,
             { key: 1, float: 'right' },
-            _react2['default'].createElement(ToolbarTitle, { text: 'Options' }),
-            _react2['default'].createElement(FontIcon, { className: 'muidocs-icon-custom-sort' }),
-            _react2['default'].createElement(DropDownIcon, { iconClassName: 'muidocs-icon-navigation-expand-more', menuItems: iconMenuItems }),
-            _react2['default'].createElement(ToolbarSeparator, null),
-            _react2['default'].createElement(RaisedButton, { label: 'Create Broadcast', primary: true })
+            _react2['default'].createElement(_materialUi.ToolbarTitle, { text: 'Options' }),
+            _react2['default'].createElement(_materialUi.FontIcon, { className: 'muidocs-icon-custom-sort' }),
+            _react2['default'].createElement(_materialUi.DropDownIcon, { iconClassName: 'muidocs-icon-navigation-expand-more', menuItems: iconMenuItems }),
+            _react2['default'].createElement(_materialUi.ToolbarSeparator, null),
+            _react2['default'].createElement(_materialUi.RaisedButton, { label: 'Create Broadcast', primary: true })
           )
         )
       );
@@ -94,13 +85,8 @@ var App = (function (_React$Component) {
   return App;
 })(_react2['default'].Component);
 
-App.contextTypes = {
-  router: _react2['default'].PropTypes.func
-};
-
 App.childContextTypes = {
-  muiTheme: _react2['default'].PropTypes.object,
-  router: _react2['default'].PropTypes.func
+  muiTheme: _react2['default'].PropTypes.object
 };
 
 _reactDom2['default'].render(_react2['default'].createElement(App, null), document.getElementById('app'));

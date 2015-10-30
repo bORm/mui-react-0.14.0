@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const {
+import {
   DropDownIcon,
   DropDownMenu,
   FontIcon,
@@ -11,7 +11,7 @@ const {
   ToolbarSeparator,
   ToolbarTitle,
   Styles
-  } = require('material-ui');
+} from 'material-ui';
 
 const { Colors, Spacing, Typography } = Styles;
 const ThemeManager = Styles.ThemeManager;
@@ -68,13 +68,8 @@ class App extends React.Component {
   }
 }
 
-App.contextTypes = {
-  router: React.PropTypes.func
-};
-
 App.childContextTypes = {
-  muiTheme: React.PropTypes.object,
-  router: React.PropTypes.func
+  muiTheme: React.PropTypes.object
 };
 
 ReactDOM.render(<App />, document.getElementById('app'));
